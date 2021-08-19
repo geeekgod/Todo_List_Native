@@ -28,7 +28,7 @@ export default function App() {
   const onSubmit = res => {
     if (res.length > 6) {
       setTodos(prevTodos => {
-        return [{text: res, key: Math.random.toString()}, ...prevTodos];
+        return [{text: res, key: Math.random().toString()}, ...prevTodos];
       });
     } else {
       Alert.alert('Task too small', 'Todos must be 6 chars long', [

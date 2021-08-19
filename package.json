@@ -1,5 +1,5 @@
 {
-  "name": "MyProject",
+  "name": "myproject",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "17.0.2",
-    "react-native": "0.65.0"
+    "react-native": "0.65.0",
+    "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

@@ -8,14 +8,27 @@ export const AddTodos = (props) => {
     setText(e);
   };
 
+  const checkKey = e =>{
+    if(e.key === "Enter"){
+      props.onSubmit(text);
+    }
+  }
+
+  const submitTodo = (text) =>{
+    props.onSubmit(text);
+    setText("");
+  }
+
   return (
     <View>
       <TextInput
         style={styles.input}
         placeholder="Add a new task ..."
         onChangeText={onChangeHandler}
+        onKeyPress={checkKey}
+        value={text}
       />
-      <Button onPress={()=> props.onSubmit(text)} title="Add Task" color="coral"/>
+      <Button onPress={()=> submitTodo(text)} title="Add Task" color="coral"/>
 
     </View>
   );
